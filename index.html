@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASTROSATHWIK – Explore the Universe</title>
+  <meta name="description" content="ASTROSATHWIK – Your guide to astronomy, deep space science, and space missions explained in simple language. Hosted by Sathwik." />
+  <meta name="keywords" content="astronomy, space, deep space, space missions, astronews, ASTROSATHWIK, Sathwik" />
+  <meta property="og:title" content="ASTROSATHWIK – Explore the Universe" />
+  <meta property="og:description" content="Journey through the cosmos with Sathwik. Astronomy, Space Missions, AstroNews and more!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================== CANVAS STARS ======================== -->
+  <canvas id="starfield"></canvas>
+
+  <!-- ======================== NAVIGATION ======================== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="logo.jpg" alt="ASTROSATHWIK Logo" class="nav-logo-img" />
+        <span class="logo-text">ASTRO<span class="logo-accent">SATHWIK</span></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#astronews" class="nav-link" data-section="astronews">AstroNews</a></li>
+        <li><a href="#astroxplained" class="nav-link" data-section="astroxplained">AstroXplained</a></li>
+        <li><a href="#support" class="nav-link" data-section="support">Support</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======================== SECTION 1: HOME ======================== -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Astronomy & Deep Space Science</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line-1">Explore the</span>
+        <span class="title-line-2 gradient-text">COSMOS</span>
+        <span class="title-line-3">with Sathwik</span>
+      </h1>
+      <p class="hero-subtitle">
+        Unraveling the mysteries of the universe — from distant galaxies to epic space missions — explained in language everyone can love.
+      </p>
+      <div class="hero-cta">
+        <a href="https://www.youtube.com/@astrosathwik24" target="_blank" rel="noopener" class="btn btn-primary">
+          <span class="btn-icon">▶</span> Watch on YouTube
+        </a>
+        <a href="#astronews" class="btn btn-secondary">Explore AstroNews</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">🌌</span>
+          <span class="stat-label">Deep Space</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">🚀</span>
+          <span class="stat-label">Space Missions</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">📡</span>
+          <span class="stat-label">AstroNews</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ======================== SECTION 2: ASTRONEWS ======================== -->
+  <section id="astronews" class="section news-section">
+    <div class="news-bg-image"></div>
+    <div class="section-overlay"></div>
+    <div class="section-header">
+      <div class="section-tag">📡 Live from the cosmos</div>
+      <h2 class="section-title">Astro<span class="gradient-text">News</span></h2>
+      <p class="section-subtitle">The latest discoveries, missions, and breakthroughs from across the universe — curated just for you.</p>
+    </div>
+    <div class="astronews-feed-strip">
+      <div class="feed-strip-label">
+        <span class="feed-dot"></span>
+        <span>From Sathwik's Feed</span>
+      </div>
+      <div class="feed-posts-row">
+
+        <div class="feed-post-card" id="feed-post-1"
+             data-index="0" data-src="astronews1_cover.png"
+             data-title="AstroNews #1 – Cover" data-ep="#1">
+          <img src="astronews1_cover.png" alt="AstroNews #1 Cover – NASA Moon Base Initiative" loading="lazy" />
+          <div class="feed-post-overlay">
+            <span class="feed-post-ep">#1 AstroNews</span>
+            <button class="feed-view-btn">🔍 View</button>
+          </div>
+        </div>
+
+        <div class="feed-post-card" id="feed-post-2"
+             data-index="1" data-src="astronews1_text.png"
+             data-title="AstroNews #1 – Details" data-ep="#1">
+          <img src="astronews1_text.png" alt="AstroNews #1 Details – NASA Moon Base + Europa Update" loading="lazy" />
+          <div class="feed-post-overlay">
+            <span class="feed-post-ep">#1 AstroNews</span>
+            <button class="feed-view-btn">🔍 View</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="news-grid">
+      <article class="news-card featured-card" id="news-card-1">
+        <div class="news-card-glow"></div>
+        <div class="news-badge">🔥 Featured</div>
+        <div class="news-category">Deep Space</div>
+        <h3>James Webb Telescope Unveils the Most Distant Galaxy Ever Observed</h3>
+        <p>JWST has shattered records once again, capturing light from a galaxy formed just 290 million years after the Big Bang — rewriting our understanding of early cosmic history.</p>
+        <div class="news-footer">
+          <span class="news-date">📅 June 2026</span>
+          <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="read-more">Watch Breakdown →</a>
+        </div>
+      </article>
+      <article class="news-card" id="news-card-2">
+        <div class="news-card-glow"></div>
+        <div class="news-category">Mars</div>
+        <h3>Perseverance Rover Finds Organic Molecules in Martian Rock Samples</h3>
+        <p>NASA's Perseverance has discovered complex organic compounds in ancient lakebed rocks — a tantalizing clue in the search for life on Mars.</p>
+        <div class="news-footer">
+          <span class="news-date">📅 May 2026</span>
+          <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="read-more">Watch Breakdown →</a>
+        </div>
+      </article>
+      <article class="news-card" id="news-card-3">
+        <div class="news-card-glow"></div>
+        <div class="news-category">Artemis</div>
+        <h3>Artemis IV Mission: Humanity's Return to the Lunar Surface</h3>
+        <p>NASA confirms the crewed Artemis IV mission will establish the first permanent lunar habitat — setting the stage for humanity's leap to Mars.</p>
+        <div class="news-footer">
+          <span class="news-date">📅 April 2026</span>
+          <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="read-more">Watch Breakdown →</a>
+        </div>
+      </article>
+      <article class="news-card" id="news-card-4">
+        <div class="news-card-glow"></div>
+        <div class="news-category">Black Holes</div>
+        <h3>Scientists Detect Gravitational Waves from Colliding Supermassive Black Holes</h3>
+        <p>For the first time, pulsar timing arrays have confirmed gravitational waves from billion-solar-mass black holes merging across cosmic time.</p>
+        <div class="news-footer">
+          <span class="news-date">📅 March 2026</span>
+          <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="read-more">Watch Breakdown →</a>
+        </div>
+      </article>
+      <article class="news-card" id="news-card-5">
+        <div class="news-card-glow"></div>
+        <div class="news-category">Exoplanets</div>
+        <h3>New Earth-Like Exoplanet Found in the Habitable Zone of a Nearby Star</h3>
+        <p>Astronomers have confirmed an Earth-sized planet orbiting within the habitable zone of a star just 12 light-years away — our closest potential neighbor yet.</p>
+        <div class="news-footer">
+          <span class="news-date">📅 February 2026</span>
+          <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="read-more">Watch Breakdown →</a>
+        </div>
+      </article>
+      <article class="news-card" id="news-card-6">
+        <div class="news-card-glow"></div>
+        <div class="news-category">Solar System</div>
+        <h3>Europa Clipper Begins Flyby Sequence Around Jupiter's Icy Moon</h3>
+        <p>NASA's Europa Clipper spacecraft has begun its historic series of flybys, scanning the icy crust for signs of a habitable subsurface ocean.</p>
+        <div class="news-footer">
+          <span class="news-date">📅 January 2026</span>
+          <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="read-more">Watch Breakdown →</a>
+        </div>
+      </article>
+    </div>
+    <div class="section-cta">
+      <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="btn btn-primary">See All on YouTube →</a>
+    </div>
+  </section>
+
+  <!-- ======================== SECTION 3: ASTROXPLAINED ======================== -->
+  <section id="astroxplained" class="section explain-section">
+    <div class="explain-particles"></div>
+    <div class="section-header">
+      <div class="section-tag">🎬 Video Series</div>
+      <h2 class="section-title">Astro<span class="gradient-text">Xplained</span></h2>
+      <p class="section-subtitle">Complex space science broken down into simple, mind-blowing stories. No PhD required.</p>
+    </div>
+
+    <!-- Poster Gallery -->
+    <div class="poster-gallery" id="posterGallery">
+
+      <div class="poster-card" id="poster-psyche" data-index="0"
+           data-src="poster_psyche.png" data-title="Psyche Mission" data-num="#1">
+        <div class="poster-card-inner">
+          <img src="poster_psyche.png" alt="AstroXplained #1 – Psyche Mission" loading="lazy" />
+          <div class="poster-overlay">
+            <div class="poster-overlay-content">
+              <span class="poster-num">#1</span>
+              <h3>Psyche Mission</h3>
+              <p>Journey to a giant metal asteroid</p>
+              <button class="poster-view-btn">🔍 View Poster</button>
+            </div>
+          </div>
+        </div>
+        <div class="poster-label">
+          <span class="poster-ep">#1</span>
+          <span class="poster-title-text">Psyche Mission</span>
+          <span class="poster-agency nasa-badge">NASA</span>
+        </div>
+      </div>
+
+      <div class="poster-card" id="poster-gaganyaan" data-index="1"
+           data-src="poster_gaganyaan.png" data-title="Gaganyaan Mission" data-num="#2">
+        <div class="poster-card-inner">
+          <img src="poster_gaganyaan.png" alt="AstroXplained #2 – Gaganyaan Mission" loading="lazy" />
+          <div class="poster-overlay">
+            <div class="poster-overlay-content">
+              <span class="poster-num">#2</span>
+              <h3>Gaganyaan Mission</h3>
+              <p>India's first human spaceflight mission</p>
+              <button class="poster-view-btn">🔍 View Poster</button>
+            </div>
+          </div>
+        </div>
+        <div class="poster-label">
+          <span class="poster-ep">#2</span>
+          <span class="poster-title-text">Gaganyaan Mission</span>
+          <span class="poster-agency isro-badge">ISRO</span>
+        </div>
+      </div>
+
+      <div class="poster-card" id="poster-juice" data-index="2"
+           data-src="poster_juice.jpg" data-title="JUICE Mission" data-num="#3">
+        <div class="poster-card-inner">
+          <img src="poster_juice.jpg" alt="AstroXplained #3 – JUICE Mission" loading="lazy" />
+          <div class="poster-overlay">
+            <div class="poster-overlay-content">
+              <span class="poster-num">#3</span>
+              <h3>JUICE Mission</h3>
+              <p>Jupiter's Icy Moons Explorer</p>
+              <button class="poster-view-btn">🔍 View Poster</button>
+            </div>
+          </div>
+        </div>
+        <div class="poster-label">
+          <span class="poster-ep">#3</span>
+          <span class="poster-title-text">JUICE Mission</span>
+          <span class="poster-agency esa-badge">ESA</span>
+        </div>
+      </div>
+
+      <div class="poster-card" id="poster-voyagers" data-index="3"
+           data-src="poster_voyagers.png" data-title="The Voyagers" data-num="#4">
+        <div class="poster-card-inner">
+          <img src="poster_voyagers.png" alt="AstroXplained #4 – The Voyagers" loading="lazy" />
+          <div class="poster-overlay">
+            <div class="poster-overlay-content">
+              <span class="poster-num">#4</span>
+              <h3>The Voyagers</h3>
+              <p>Humanity's most distant explorers</p>
+              <button class="poster-view-btn">🔍 View Poster</button>
+            </div>
+          </div>
+        </div>
+        <div class="poster-label">
+          <span class="poster-ep">#4</span>
+          <span class="poster-title-text">The Voyagers</span>
+          <span class="poster-agency nasa-badge">NASA</span>
+        </div>
+      </div>
+
+      <div class="poster-card" id="poster-chandrayaan" data-index="4"
+           data-src="poster_chandrayaan3.png" data-title="Chandrayaan 3" data-num="#5">
+        <div class="poster-card-inner">
+          <img src="poster_chandrayaan3.png" alt="AstroXplained #5 – Chandrayaan 3" loading="lazy" />
+          <div class="poster-overlay">
+            <div class="poster-overlay-content">
+              <span class="poster-num">#5</span>
+              <h3>Chandrayaan 3</h3>
+              <p>First soft-landing at the Moon's south pole</p>
+              <button class="poster-view-btn">🔍 View Poster</button>
+            </div>
+          </div>
+        </div>
+        <div class="poster-label">
+          <span class="poster-ep">#5</span>
+          <span class="poster-title-text">Chandrayaan 3</span>
+          <span class="poster-agency isro-badge">ISRO</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="section-cta">
+      <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="btn btn-primary">▶ Watch All Episodes on YouTube</a>
+    </div>
+  </section>
+
+  <!-- ======================== LIGHTBOX ======================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Poster Viewer">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" id="lightboxImg" />
+        <div class="lightbox-caption">
+          <span class="lightbox-ep" id="lightboxEp"></span>
+          <span class="lightbox-title" id="lightboxTitle"></span>
+        </div>
+      </div>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    </div>
+  </div>
+
+  <!-- ======================== SECTION 4: SUPPORT ======================== -->
+
+  <section id="support" class="section support-section">
+    <div class="support-nebula"></div>
+    <div class="section-header">
+      <div class="section-tag">❤️ Support the Mission</div>
+      <h2 class="section-title">Fuel the <span class="gradient-text">Journey</span></h2>
+      <p class="section-subtitle">Your support keeps the cosmos alive on this channel. Every contribution powers more videos, better research, and bigger explorations!</p>
+    </div>
+    <div class="support-content">
+      <div class="support-card" id="support-main-card">
+        <div class="support-card-glow"></div>
+        <div class="support-rocket">🚀</div>
+        <h3>Support ASTROSATHWIK</h3>
+        <p>Help Sathwik continue bringing the wonders of the universe to everyone. Your donation directly funds research, equipment, and video production.</p>
+        <div class="donation-box" id="donation-box">
+          <div class="donation-label">Donate via PhonePe / GPay / UPI</div>
+          <div class="upi-id-display">
+            <span class="upi-id" id="upi-id-text">sathwikpatibanda@fam</span>
+            <button class="copy-btn" id="copyUpiBtn" onclick="copyUPI()">📋 Copy</button>
+          </div>
+          <div class="qr-placeholder" id="qr-area">
+            <div class="qr-inner">
+              <div class="qr-grid">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="qr-text">Scan to Pay</p>
+            </div>
+          </div>
+          <p class="upi-note">UPI ID: <strong>sathwikpatibanda@fam</strong></p>
+        </div>
+      </div>
+      <div class="support-perks">
+        <h3>Why Your Support Matters</h3>
+        <div class="perk-item" id="perk-1">
+          <div class="perk-icon">🎬</div>
+          <div class="perk-text">
+            <h4>Better Videos</h4>
+            <p>Upgrade equipment and software for higher quality content</p>
+          </div>
+        </div>
+        <div class="perk-item" id="perk-2">
+          <div class="perk-icon">🔭</div>
+          <div class="perk-text">
+            <h4>More Research</h4>
+            <p>Access to scientific journals and premium space databases</p>
+          </div>
+        </div>
+        <div class="perk-item" id="perk-3">
+          <div class="perk-icon">📡</div>
+          <div class="perk-text">
+            <h4>More AstroNews</h4>
+            <p>Faster coverage of space events and breaking cosmic discoveries</p>
+          </div>
+        </div>
+        <div class="perk-item" id="perk-4">
+          <div class="perk-icon">🌟</div>
+          <div class="perk-text">
+            <h4>Community Growth</h4>
+            <p>Help build a thriving community of space enthusiasts</p>
+          </div>
+        </div>
+        <div class="thank-you-msg">
+          <span>🙏</span>
+          <p>Thank you for being part of this cosmic adventure. Every rupee counts toward the stars!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SECTION 5: ABOUT ======================== -->
+  <section id="about" class="section about-section">
+    <div class="about-bg-image"></div>
+    <div class="about-overlay"></div>
+    <div class="about-content">
+      <div class="about-image-col">
+        <div class="about-img-frame" id="about-img-frame">
+          <div class="about-img-glow"></div>
+          <div class="about-portrait"><img src="logo.jpg" alt="ASTROSATHWIK" class="about-logo-img" /></div>
+          <div class="about-img-ring ring-a"></div>
+          <div class="about-img-ring ring-b"></div>
+        </div>
+        <div class="about-badges">
+          <div class="about-badge" id="badge-yt">
+            <img src="logo.jpg" alt="Logo" class="badge-logo" />
+            <div>
+              <strong>YouTube</strong>
+              <span>ASTRO SATHWIK</span>
+            </div>
+          </div>
+          <div class="about-badge" id="badge-ig">
+            <span>📸</span>
+            <div>
+              <strong>Instagram</strong>
+              <span>astrosathwik_24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text-col">
+        <div class="section-tag">🌌 About Me</div>
+        <h2 class="about-title">Welcome to <span class="gradient-text">"Sathwik's Space Sanctuary"!</span> 🚀</h2>
+        <div class="about-bio">
+          <p>
+            Embark on an interstellar journey through the cosmos with me, <strong>Sathwik</strong>, your guide to the wonders of astronomy and space exploration.
+          </p>
+          <p>
+            At just <strong>17 years old</strong>, I've been fascinated by the mysteries of the universe for as long as I can remember, and I'm thrilled to share my passion with fellow space enthusiasts like you.
+          </p>
+          <p>
+            Join me on this cosmic adventure as we uncover the secrets of <strong>distant galaxies</strong>, marvel at the beauty of celestial phenomena, and explore the latest discoveries in the field of space science.
+          </p>
+          <p>
+            Each week, I'll be bringing you new videos packed with <strong>fascinating insights</strong>, breathtaking imagery, and mind-blowing facts about the universe we call home.
+          </p>
+          <p class="about-callout">
+            Hit that subscribe button and join our growing community of astronomy and space lovers. Together, we'll journey to the stars and beyond, one video at a time. <strong>See you in the cosmos! 🌌✨</strong>
+          </p>
+        </div>
+        <div class="socials-grid">
+          <a href="https://www.youtube.com/@astrosathwik24" target="_blank" rel="noopener" class="social-card" id="social-yt">
+            <div class="social-icon yt-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </div>
+            <div class="social-info">
+              <span class="social-name">YouTube</span>
+              <span class="social-handle">ASTRO SATHWIK</span>
+            </div>
+            <span class="social-arrow">→</span>
+          </a>
+          <a href="https://instagram.com/astrosathwik_24" target="_blank" rel="noopener" class="social-card" id="social-ig">
+            <div class="social-icon ig-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div class="social-info">
+              <span class="social-name">Instagram</span>
+              <span class="social-handle">astrosathwik_24</span>
+            </div>
+            <span class="social-arrow">→</span>
+          </a>
+        </div>
+        <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="btn btn-primary about-subscribe-btn">
+          🔔 Subscribe Now – Join the Cosmos!
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="site-footer">
+    <div class="footer-stars"></div>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="ASTROSATHWIK Logo" class="footer-logo-img" />
+        <span class="logo-text">ASTRO<span class="logo-accent">SATHWIK</span></span>
+      </div>
+      <p class="footer-tagline">Exploring the universe, one video at a time. 🌌</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#astronews">AstroNews</a>
+        <a href="#astroxplained">AstroXplained</a>
+        <a href="#support">Support</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/@astrosathwik24" target="_blank" class="footer-social-link" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://instagram.com/astrosathwik_24" target="_blank" class="footer-social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">© 2026 ASTROSATHWIK. Made with ❤️ and stardust.</p>
+    </div>
+  </footer>
+
+  <!-- COPY TOAST -->
+  <div class="toast" id="copyToast">✅ UPI ID Copied!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
